@@ -1,0 +1,21 @@
+***********************************************Explanation *************************************************
+
+
+The program you’ve written is for a Snake game that runs on an Arduino and is displayed on an OLED screen.
+It starts by including the necessary libraries for the OLED display and defining global variables for the game. 
+The joystick’s analog values are read in the keyScan function, which sets the snake’s direction. The draw_snake 
+function is responsible for drawing a block of the snake on the OLED display at the given coordinates.
+The show_score function displays the score at the given coordinates on the OLED display.
+
+The screen function clears the display, draws the game area, displays the level and score, and draws the snake 
+and food on the OLED display. The draw_food function generates a new food location if the previous food has been
+eaten, ensuring that the new food location is not inside the snake’s body. The snake_move function updates the 
+snake’s head position based on its direction, checks if the snake has eaten the food, and updates the snake’s
+body position. It also calls the function to check if the snake has died.
+
+The draw_game_over function displays the “GAME OVER” message along with the final level and score on the OLED 
+display. The check_snake_die function checks if the snake has hit the wall or eaten itself, and sets the game_over
+variable to true if either condition is met. The setup function initializes the OLED display and sets the random
+seed for the food location. Finally, the loop function is the main game loop. It calls the key scan, snake move, 
+draw food, and screen functions in each iteration. If the game is over, 
+it calls the draw game over function instead.
